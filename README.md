@@ -16,10 +16,10 @@
 
 ## Использованные модели
 
-- Logistic Regression с L2-регуляризацией;
-- Logistic Regression с L1-регуляризацией;
-- Logistic Regression с Elastic Net;
-- Decision Tree Classifier;
+- Logistic Regression с L2-регуляризацией,
+- Logistic Regression с L1-регуляризацией,
+- Logistic Regression с Elastic Net,
+- Decision Tree Classifier,
 - Random Forest Classifier.
 
 ## Структура ноутбука
@@ -39,12 +39,12 @@
 
 - Данные несбалансированы: положительный класс `Revenue=True` встречается заметно реже.
 - `PageValues` оказался наиболее важным признаком по встроенной важности Random Forest и permutation importance.
-- Глубокое дерево решений переобучается; наилучший баланс для одиночного дерева наблюдался около `max_depth=5`.
+- Глубокое дерево решений переобучается. Наилучший баланс для одиночного дерева наблюдался около `max_depth=5`.
 - Random Forest стал лучшей моделью по кросс-валидации: ROC AUC = 0.926, F1 macro = 0.784.
-- После GridSearchCV лучшая конфигурация Random Forest достигла ROC AUC = 0.919 на внешнем тестовом наборе.
+- После GridSearchCV лучшая конфигурация Random Forest достигла ROC AUC = 0.919 на тестовой выборке.
 - Отбор 20 наиболее важных признаков не ухудшил качество на текущем тестовом разбиении: ROC AUC = 0.921, F1 macro = 0.786.
 
 ## Содержимое репозитория
 
-- `research.ipynb` — полный анализ, модели, кросс-валидация, подбор гиперпараметров и отбор признаков.
-- `online_shoppers_intention.csv` — используемый датасет.
+- `research.ipynb` - полный анализ, модели, кросс-валидация, подбор гиперпараметров и отбор признаков.
+- `online_shoppers_intention.csv` - используемый датасет.
